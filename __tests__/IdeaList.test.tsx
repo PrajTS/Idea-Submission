@@ -28,7 +28,7 @@ const MockedComponent = () => {
   )
 }
 
-describe('Header', () => {
+describe('IdeaList', () => {
   it('renders two titles when number of ideas is 2', () => {
     render(<MockedComponent />)
 

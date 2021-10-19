@@ -22,6 +22,6 @@ export const userSlice = createSlice({
 
 export const { setUsername, checkLogin } = userSlice.actions
 
-export const challeneges = (state: RootState) => state.user
+export const user = (state: RootState) => state.user
 
 export default userSlice.reducer

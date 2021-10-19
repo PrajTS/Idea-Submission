@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import { Box } from '@mui/system'
-import { getIdeasList, sort } from '@redux/slices/ideasSlice'
+import { getIdeasList, sort } from '../redux/slices/ideasSlice'
 import { RootState } from '@redux/store'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'

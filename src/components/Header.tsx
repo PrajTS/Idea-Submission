@@ -1,5 +1,5 @@
 import { AppBar, Button, Toolbar, Typography } from '@mui/material'
-import { setUsername } from '@redux/slices/userSlice'
+import { setUsername } from '../redux/slices/userSlice'
 import { RootState } from '@redux/store'
 import { useDispatch, useSelector } from 'react-redux'
 import Link from 'next/link'

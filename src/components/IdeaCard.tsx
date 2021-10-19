@@ -11,7 +11,7 @@ import {
 import { grey, pink } from '@mui/material/colors'
 import { makeStyles } from '@mui/styles'
 import { Box } from '@mui/system'
-import { upVote } from '@redux/slices/ideasSlice'
+import { upVote } from '../redux/slices/ideasSlice'
 import { FC } from 'react'
 import { useDispatch } from 'react-redux'
 import Link from 'next/link'
@@ -47,7 +47,7 @@ const IdeaCard: FC<IIdea> = ({
   return (
     <Card>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="h2">
           {title}
         </Typography>
         <Typography
@@ -94,7 +94,7 @@ const IdeaCard: FC<IIdea> = ({
             {votes}
           </Typography>
           <IconButton aria-label="up vote" onClick={vote}>
-            <FavoriteIcon sx={{ color: hasVoted ? pink[500] : grey[400] }} />
+            <FavoriteIcon sx={{ color: hasVoted ? pink[500] : grey[400] }}/>
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
           <Typography

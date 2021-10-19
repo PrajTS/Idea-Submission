@@ -45,7 +45,7 @@ const IdeaDetails = () => {
   return (
     <div>
       <Head>
-        <title>{ideaDetails ? ideaDetails?.title : ''} | Scriptbox</title>
+        <title>{ideaDetails ? ideaDetails?.title : ''} | Scripbox</title>
       </Head>
       {ideaDetails ? (
         <Box bgcolor="white" px={2}>

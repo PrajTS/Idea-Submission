@@ -1,6 +1,6 @@
 import { Button, Container, TextField, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import { setUsername } from '@redux/slices/userSlice'
+import { setUsername } from '../redux/slices/userSlice'
 import { FormEvent } from 'react'
 import { useDispatch } from 'react-redux'
 import Head from 'next/head'

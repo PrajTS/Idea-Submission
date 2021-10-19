@@ -5,7 +5,7 @@ import {
   Typography,
 } from '@mui/material'
 import { Box } from '@mui/system'
-import { sort } from '@redux/slices/ideasSlice'
+import { sort } from '../redux/slices/ideasSlice'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'

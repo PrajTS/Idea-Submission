@@ -1,6 +1,6 @@
 import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { NextRouter } from 'next/router'
-import { sortIdeas } from 'src/services/ideas'
+import { sortIdeas } from '../../services/ideas'
 import type { RootState } from '../store'
 
 // Define a type for the slice state

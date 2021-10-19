@@ -8,7 +8,7 @@ import {
   Select,
   SelectChangeEvent,
   TextField,
-  Typography
+  Typography,
 } from '@mui/material'
 import { Theme, useTheme } from '@mui/material/styles'
 import { Box } from '@mui/system'
@@ -46,7 +46,9 @@ function getStyles(topic: string, topicName: readonly string[], theme: Theme) {
 }
 
 const CreateIdea = () => {
-  const { control, handleSubmit, setValue } = useForm()
+  const { control, handleSubmit, setValue, formState } = useForm({
+    mode: 'onChange',
+  })
   const theme = useTheme()
   const dispatch = useDispatch()
   const router = useRouter()
@@ -106,6 +108,7 @@ const CreateIdea = () => {
               name="title"
               control={control}
               defaultValue=""
+              rules={{ required: true }}
               render={({ field }) => (
                 <TextField
                   {...field}
@@ -122,6 +125,7 @@ const CreateIdea = () => {
               name="description"
               control={control}
               defaultValue=""
+              rules={{ required: true }}
               render={({ field }) => (
                 <TextField
                   {...field}
@@ -139,6 +143,7 @@ const CreateIdea = () => {
             <Controller
               name="tags"
               control={control}
+              rules={{ required: true }}
               render={({ field }) => (
                 <FormControl sx={{ width: '100%' }}>
                   <InputLabel id="tags-label">Tags</InputLabel>
@@ -180,6 +185,7 @@ const CreateIdea = () => {
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
+            disabled={!formState.isValid || !formState.isDirty}
           >
             Submit
           </Button>
